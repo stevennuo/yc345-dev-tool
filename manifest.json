@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "小纸条",
+    "version": "0.0.2",
+
+    "description": "洋葱数学小纸条",
+    "devtools_page": "devtools.html",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/webapp/lesson/*"
+            ],
+            "js": ["js/inject/debug.js"],
+            "run_at": "document_start"
+        }
+    ],
+//    "background": {
+//        "scripts": ["js/devtools.js"],
+//        "persistent": false
+//    },
+
+    "permissions": [
+        "tabs",
+        "<all_urls>"
+    ]
+//    "content_scripts": [
+//        {
+//            "matches": ["<all_urls>"],
+//            "js": ["js/inject/debug.js"],
+//            "run_at": "document_start"
+//        }
+//    ],
+//    "minimum_chrome_version": "21.0.1180.57"
+}
