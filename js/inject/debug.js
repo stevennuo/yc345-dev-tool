@@ -64,7 +64,8 @@ var inject = function () {
                     }).length <= 0) {
                         // filling
                         $(".promptText").css('color', 'red');
-                        $(".promptText").text($(".promptText").scope().currentProblem.correct_answer);
+                        if($(".promptText").scope())
+                            $(".promptText").text($(".promptText").scope().currentProblem.correct_answer);
                     };
                 }
             }, 300);
