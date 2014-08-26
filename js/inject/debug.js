@@ -64,8 +64,10 @@ var inject = function () {
                     }).length <= 0) {
                         // filling
                         $(".promptText").css('color', 'red');
-                        if($(".promptText").scope())
-                            $(".promptText").text($(".promptText").scope().currentProblem.correct_answer);
+                        if($("#formula").parent().scope()){
+//                            console.log($("#formula").parent().scope());
+                            $(".promptText").text($("#formula").parent().scope().currentProblem.correct_answer);
+                        }
                     };
                 }
             }, 300);
